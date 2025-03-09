@@ -1,18 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Loader2, MessageSquare, RefreshCw } from 'lucide-react';
+import { Loader2, MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-
-interface Feedback {
-  user: string;
-  shortAddress: string;
-  message: string;
-  timestamp: string;
-}
+import { FormattedFeedback } from "@/types/feedback";
 
 interface FeedbackListProps {
-  feedbacks: Feedback[];
+  feedbacks: FormattedFeedback[];
   loading: boolean;
   currentAccount: string;
 }

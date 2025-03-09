@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Loader2, Wallet, LogOut } from 'lucide-react';
-import { Badge } from "./ui/badge";
+import { Badge } from "@/components/ui/badge";
 
 interface WalletConnectProps {
   connectWallet: () => Promise<void>;
@@ -13,12 +13,6 @@ export default function WalletConnect({
   account, 
   loading 
 }: WalletConnectProps) {
-  // Format the account address for display
-  const formatAddress = (address: string) => {
-    if (!address) return "";
-    return `${address.substring(0, 6)}...${address.substring(address.length - 4)}`;
-  };
-
   return (
     <div className="w-full max-w-md mx-auto">
       <div className="flex flex-col items-center justify-center gap-4 py-4">
