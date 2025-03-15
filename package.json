@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "patch-package && node ./scripts/polyfill.js"
+    "postinstall": "node ./scripts/polyfill.js"
   },
   "dependencies": {
     "@noble/secp256k1": "^2.0.0",
@@ -22,6 +22,7 @@
     "lucide-react": "^0.479.0",
     "next": "15.2.1",
     "os-browserify": "^0.3.0",
+    "patch-package": "^8.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sonner": "^2.0.1",
